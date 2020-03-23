@@ -1,0 +1,226 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap";
+
+:root {
+    --color-green: #50fa7b;
+    --color-starter: #7159C1;
+    --color-launchbase: #FD951F;
+    --color-gostack: #04D361;
+    --background-color: rgb(11, 10, 13);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(135, 134, 139);
+    background-color: #0e0e0e;
+    background-image: url("/assets/img/background-img.png");
+    background-attachment: fixed;
+    /* background-color: var(--background-color); */
+}
+
+a:link, a {
+    text-decoration: none;
+}
+
+/*------------- Header -------------*/
+header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    background-color: rgb(17, 17, 22);
+}
+
+header .rocket-logo{
+    padding: 0 0 0 115px;
+}
+header .acount {
+    position: fixed;
+    top: 10px;
+    right: 120px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+header .acount .notification {
+    color: white;
+    background-color: rgb(25, 24, 31);
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+header .acount .notification:hover{
+    color: blue;
+    background-color: rgb(34, 33, 41);
+}
+
+header .acount .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header .acount .info .name {
+    font-size: 16px;
+    padding-bottom: 4px;
+    font-weight: bold;
+
+}
+
+header .acount .info .email {
+    padding-top: \4px;
+    font-size: 12px;
+    color: rgb(135, 134, 139);
+}
+
+header .acount .profile {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgb(113, 89, 193);;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* header a{
+    color: currentColor;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header p {
+    color: currentColor;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 15px;
+} */
+
+/* -------------  Cards ------------- */
+.cards{
+    margin: auto; 
+    max-width: 1426px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.card {
+    width: 445px;
+    height: 650px;
+    margin-right: 25px;
+    background-image: url("/assets/img/card-bg.png");
+    background-position: center bottom;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid var(--background-color);
+    transition: margin 0.2s ease-in;
+
+    /* Align their elements in sequence in the Y axis */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+a.card:hover {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.card span{
+    margin: 70px auto;
+    padding: 10px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+}
+
+.card div{
+    /* Align the logo of the course */
+    margin: 0 auto;
+}
+
+.card p{
+    color: rgb(135, 134, 139);
+    margin:  30px auto;
+    max-width: 270px;
+    text-align: center;
+}
+
+.card a {
+    margin: 35px auto 0;
+
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    /* Removing default color and hyperlink from tag a */
+    color: #222;
+}
+
+/* Starter */
+.card#starter span, .card#starter p strong{
+    color: var(--color-starter);
+}
+
+.card#starter span, .cards a.card#starter:hover {
+    transition: border-color 0.15s ease-in;
+    border-color: var(--color-starter);
+}
+
+/* LaunchBase */
+.card#launchbase span, .card#launchbase p strong{
+    color: var(--color-launchbase);
+}
+
+.card#launchbase span, .cards a.card#launchbase:hover {
+    transition: border-color 0.15s ease-in;
+    border-color: var(--color-launchbase);
+}
+
+.card#launchbase a{
+    font-size: 15px;
+    background-color: var(--color-launchbase);
+    border-color: var(--color-launchbase);
+
+    transition: all 0.3s ease 0s;
+}
+
+.card#launchbase a:hover{
+    background-color: transparent;
+    color: white;
+}
+
+/* GoStack */
+.card#gostack span, .card#gostack p strong{
+    color: var(--color-gostack);
+}
+
+.card#gostack span, .cards a.card#gostack:hover {
+    transition: border-color 0.15s ease-in;
+    border-color: var(--color-gostack);
+}
+
+.card#gostack a{
+    font-size: 15px;
+    background-color: var(--color-gostack);
+    border-color: var(--color-gostack);
+
+    transition: all 0.3s ease 0s;
+}
+
+.card#gostack a:hover{
+    background-color: transparent;
+    color: white;
+}
