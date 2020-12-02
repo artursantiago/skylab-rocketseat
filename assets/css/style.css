@@ -18,7 +18,7 @@ body{
     font-family: 'Roboto', sans-serif;
     color: rgb(135, 134, 139);
     background-color: #0e0e0e;
-    background-image: url("assets/img/background-img.png");
+    background-image: url("/assets/img/background-img.png");
     background-attachment: fixed;
     /* background-color: var(--background-color); */
 }
@@ -121,7 +121,7 @@ header p {
     width: 445px;
     height: 650px;
     margin-right: 25px;
-    background-image: url("assets/img/card-bg.png");
+    background-image: url("/assets/img/card-bg.png");
     background-position: center bottom;
     background-size: cover;
     cursor: pointer;
